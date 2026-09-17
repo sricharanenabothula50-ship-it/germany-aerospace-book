@@ -1,8 +1,8 @@
-"""Build docs/index.html from book.md. No deps. Run: python src/build_html.py"""
-import os, re, html
+"""Build HTML from markdown. No deps. Run: python src/build_html.py [in.md [out.html]]"""
+import os, re, html, sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-IN_MD = os.path.join(BASE, "book.md")
-OUT_HTML = os.path.join(BASE, "docs", "index.html")
+IN_MD = sys.argv[1] if len(sys.argv) > 1 else os.path.join(BASE, "book.md")
+OUT_HTML = sys.argv[2] if len(sys.argv) > 2 else os.path.join(BASE, "docs", "index.html")
 
 def esc(s):
     return html.escape(s, quote=False)
