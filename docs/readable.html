@@ -52,7 +52,7 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:26px}
 .prog b{font-size:15px}
 @media print{.hero nav,.noprint,#toTop{display:none}.card{box-shadow:none;break-inside:avoid}}
 </style></head><body>
-<div class="hero"><div class="hero-inner">
+<div class="hero"><canvas id="space" style="position:absolute;inset:0;width:100%;height:100%;z-index:0"></canvas><div class="hero-inner">
 <svg class="plane" viewBox="0 0 100 60" fill="none"><path d="M5 35 L60 35 L95 10 L88 35 L95 38 L60 38 L55 55 L48 55 L50 38 L5 38 Z" fill="#7dd3fc"/><path d="M5 38 L50 38 L48 42 L5 42 Z" fill="#e0f2fe"/></svg>
 <div class="badge">✈ Telangana → Germany · No JEE needed · Updated Sep 2026</div>
 <h1>Study <span>Aerospace in Germany</span><br>after Inter — the visual guide</h1>
@@ -142,8 +142,27 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:26px}
 </div>
 <footer>Visual overall report · verified Sep 2026 · re-check fees & deadlines on official pages each intake · <a href="./">2000-page reference book</a></footer>
 <button id="toTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
 <script>
 function f(v){v=v.toLowerCase();document.querySelectorAll('.prog').forEach(e=>{e.style.display=e.dataset.t.includes(v)||!v?'':'none'})}
 addEventListener('scroll',()=>{toTop.style.display=scrollY>500?'block':'none'});
+/* 3D tilt cards */
+document.querySelectorAll('.card').forEach(c=>{c.style.transition='transform .15s';c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*7}deg) rotateX(${-y*7}deg)`});c.addEventListener('mouseleave',()=>c.style.transform='')});
+/* 3D orbital hero: wireframe earth + 2 orbit rings + satellite + stars */
+try{
+if(window.THREE){
+const cv=document.getElementById('space'),R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,2,0.1,100);C.position.set(0,0.6,7);
+const earth=new THREE.Mesh(new THREE.SphereGeometry(1.5,24,24),new THREE.MeshBasicMaterial({color:0x38bdf8,wireframe:true,transparent:true,opacity:0.55}));S.add(earth);
+const ring1=new THREE.Mesh(new THREE.TorusGeometry(2.4,0.015,8,80),new THREE.MeshBasicMaterial({color:0x22d3ee,transparent:true,opacity:0.7}));ring1.rotation.x=1.2;S.add(ring1);
+const ring2=new THREE.Mesh(new THREE.TorusGeometry(3.1,0.012,8,80),new THREE.MeshBasicMaterial({color:0xf59e0b,transparent:true,opacity:0.55}));ring2.rotation.x=1.35;ring2.rotation.y=0.4;S.add(ring2);
+const sat=new THREE.Mesh(new THREE.BoxGeometry(0.16,0.1,0.22),new THREE.MeshBasicMaterial({color:0xffffff}));S.add(sat);
+const sg=new THREE.BufferGeometry(),sp=[];for(let i=0;i<350;i++)sp.push((Math.random()-0.5)*22,(Math.random()-0.5)*12,(Math.random()-0.5)*10-2);
+sg.setAttribute('position',new THREE.Float32BufferAttribute(sp,3));S.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0xffffff,size:0.035,transparent:true,opacity:0.8})));
+function size(){const h=cv.parentElement;R.setSize(h.clientWidth,h.clientHeight,false);C.aspect=h.clientWidth/h.clientHeight;C.updateProjectionMatrix()}
+size();addEventListener('resize',size);
+let t=0;(function anim(){requestAnimationFrame(anim);if(document.hidden)return;t+=0.008;earth.rotation.y+=0.0025;
+sat.position.set(Math.cos(t)*2.4,Math.sin(t)*2.4*Math.sin(1.2),Math.sin(t)*2.4*Math.cos(1.2));sat.rotation.y=t*2;R.render(S,C)})();
+}}catch(e){/* 2D fallback: hero gradient stays */}
 </script>
 </body></html>
