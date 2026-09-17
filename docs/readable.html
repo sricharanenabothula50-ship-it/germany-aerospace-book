@@ -1,168 +1,276 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Germany Aerospace for Telangana Students · Visual Guide</title>
+<title>The Telangana → Germany Aerospace Book · Complete Edition</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#0b1e3a;--sky:#0284c7;--cyan:#22d3ee;--gold:#f59e0b;--ink:#1e293b;--mut:#64748b;--bg:#f4f7fb;--card:#ffffff}
-body{font-family:'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
-/* HERO */
-.hero{background:radial-gradient(1200px 500px at 80% -10%,#1d4ed8 0%,var(--navy) 55%),var(--navy);color:#fff;padding:56px 24px 64px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='8' cy='8' r='1.5' fill='%23ffffff22'/%3E%3C/svg%3E")}
-.hero-inner{max-width:1080px;margin:0 auto;position:relative;z-index:1}
-.badge{display:inline-block;background:#ffffff22;border:1px solid #ffffff44;padding:4px 14px;border-radius:20px;font-size:13px;margin-bottom:14px}
-.hero h1{font-size:2.3em;line-height:1.2;margin-bottom:10px}
-.hero h1 span{background:linear-gradient(90deg,var(--cyan),#a5f3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.sub{color:#bae6fd;max-width:720px;font-size:1.05em}
-.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
-.stat{background:#ffffff14;border:1px solid #ffffff2e;border-radius:14px;padding:14px 20px;min-width:130px;backdrop-filter:blur(4px)}
-.stat b{font-size:1.7em;display:block;color:#fff}.stat span{font-size:13px;color:#bae6fd}
-.plane{position:absolute;right:4%;top:26px;width:150px;opacity:.9;z-index:1;animation:fly 7s ease-in-out infinite}
-@keyframes fly{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(-4deg)}}
-/* LAYOUT */
-.shell{max-width:1080px;margin:-34px auto 0;padding:0 20px 60px;position:relative;z-index:2}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:760px){.grid2{grid-template-columns:1fr}.hero h1{font-size:1.6em}.plane{display:none}}
-.card{background:var(--card);border-radius:16px;padding:22px 24px;box-shadow:0 6px 24px #0b1e3a14;margin:16px 0;border:1px solid #e2e8f0}
-.card h2{font-size:1.25em;margin-bottom:10px;display:flex;align-items:center;gap:10px}
-.ico{width:34px;height:34px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:18px;flex:none}
-table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}
-th,td{border:1px solid #e2e8f0;padding:8px 10px;text-align:left;vertical-align:top}
-th{background:var(--navy);color:#fff;font-size:13px}
-tr:nth-child(even) td{background:#f8fafc}
-.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:20px}
-.free{background:#dcfce7;color:#166534}.paid{background:#fef3c7;color:#92400e}.warn-t{background:#fee2e2;color:#991b1b}.info-t{background:#e0f2fe;color:#075985}
-/* bars */
-.bar-row{display:grid;grid-template-columns:150px 1fr 110px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
-.bar{height:14px;border-radius:8px;background:linear-gradient(90deg,var(--sky),var(--cyan))}
-.bar-bg{background:#e2e8f0;border-radius:8px}
-/* timeline */
-.tl{position:relative;padding-left:28px;margin:12px 0}
-.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--sky),var(--cyan));border-radius:3px}
-.tl div{position:relative;padding:8px 0}
-.tl div::before{content:"";position:absolute;left:-25px;top:14px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--sky)}
-.tip{background:#f0f9ff;border-left:5px solid var(--sky);padding:12px 16px;border-radius:0 12px 12px 0;margin:12px 0}
-.warn{background:#fffbeb;border-left:5px solid var(--gold);padding:12px 16px;border-radius:0 12px 12px 0;margin:12px 0}
-.btn{display:inline-block;background:var(--sky);color:#fff;padding:10px 22px;border-radius:10px;text-decoration:none;font-weight:700;margin:6px 8px 6px 0}
-.btn.ghost{background:#fff;color:var(--sky);border:2px solid var(--sky)}
-footer{text-align:center;color:var(--mut);font-size:13px;padding:26px}
-#toTop{position:fixed;right:18px;bottom:18px;background:var(--navy);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;display:none;box-shadow:0 6px 18px #0005}
-#filter{width:100%;padding:12px 16px;border-radius:12px;border:2px solid #e2e8f0;font-size:15px;margin:10px 0}
-.prog{border:1px solid #e2e8f0;border-radius:12px;padding:12px 14px;margin:8px 0;background:#fff}
-.prog b{font-size:15px}
-@media print{.hero nav,.noprint,#toTop{display:none}.card{box-shadow:none;break-inside:avoid}}
+:root{--ink:#2b2118;--mut:#7a6a58;--gold:#b8860b;--gold2:#e8c15a;--paper:#faf6ee;--card:#fffdf7;--red:#9c2b2b}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:#3a3129;line-height:1.75}
+/* progress */
+#bar{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2));width:0;z-index:50}
+/* COVER */
+.cover{background:radial-gradient(900px 500px at 50% 110%,#5a3d12 0%,#241a0e 60%),#1d150b;color:#f5e9cf;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;border-bottom:6px double var(--gold)}
+.cover-inner{max-width:760px}
+.cover .rule{color:var(--gold2);letter-spacing:5px;font-size:13px;text-transform:uppercase}
+.cover h1{font-size:2.6em;line-height:1.25;margin:18px 0;font-weight:700}
+.cover h1 em{color:var(--gold2)}
+.cover .sub{font-style:italic;color:#d8c49a;max-width:600px;margin:0 auto}
+.cover .meta{margin-top:26px;font-size:14px;color:#b7a37e}
+.cover .btns{margin-top:30px}
+.btn{display:inline-block;background:var(--gold);color:#1d150b;padding:12px 30px;border-radius:4px;text-decoration:none;font-weight:700;font-family:Arial,sans-serif;margin:6px}
+.btn.ghost{background:transparent;color:var(--gold2);border:2px solid var(--gold)}
+/* BOOK BODY */
+.book{max-width:880px;margin:0 auto;background:var(--paper);box-shadow:0 0 60px #000;padding:0 0 40px}
+.chap{padding:44px 56px;border-bottom:1px solid #e5dcc4}
+@media(max-width:640px){.chap{padding:30px 22px}.cover h1{font-size:1.7em}}
+.chap-no{font-family:Arial,sans-serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.chap h2{font-size:1.7em;margin:6px 0 4px}
+.chap .deck{font-style:italic;color:var(--mut);margin-bottom:14px}
+.chap p.lead::first-letter{font-size:3.1em;float:left;line-height:1;padding:2px 8px 0 0;color:var(--gold);font-weight:700}
+.chap ul.points{list-style:none;margin:12px 0}
+.chap ul.points li{padding:9px 0 9px 34px;position:relative;border-bottom:1px dotted #ddd0b2}
+.chap ul.points li::before{content:"✦";position:absolute;left:4px;color:var(--gold);font-weight:700}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:14px 0;font-family:Arial,sans-serif}
+th{background:#2b2118;color:#f5e9cf;padding:9px 10px;text-align:left;font-size:13px}
+td{border:1px solid #ddd0b2;padding:8px 10px;vertical-align:top;background:#fffdf7}
+tr:nth-child(even) td{background:#f6f0df}
+.note{background:#fbf3dc;border:1px solid var(--gold2);border-left:6px solid var(--gold);padding:12px 16px;margin:14px 0;font-size:15px}
+.danger{background:#fbeeee;border:1px solid #d99;border-left:6px solid var(--red);padding:12px 16px;margin:14px 0;font-size:15px}
+.fig{background:#fff;border:1px solid #e5dcc4;border-radius:6px;padding:14px;margin:16px 0;text-align:center}
+.fig svg{max-width:100%;height:auto}
+.fig figcaption{font-size:13px;color:var(--mut);font-style:italic;margin-top:6px}
+/* TOC */
+.toc{background:var(--card);border:2px solid var(--gold2);margin:26px 0;padding:6px 0}
+.toc a{display:flex;justify-content:space-between;padding:9px 22px;color:var(--ink);text-decoration:none;border-bottom:1px dotted #e5dcc4;font-size:15.5px}
+.toc a:hover{background:#f6efdb}.toc a span:last-child{color:var(--gold);font-family:Arial;font-size:13px}
+/* plan table week */
+.plan td:first-child{font-weight:700;white-space:nowrap}
+footer{text-align:center;color:#b7a37e;font-size:13px;padding:26px;background:#1d150b}
+#toTop{position:fixed;right:18px;bottom:18px;background:#2b2118;color:var(--gold2);border:1px solid var(--gold);width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;display:none}
+@media print{.cover{min-height:auto}#toTop,.btns{display:none}.book{box-shadow:none}.chap{break-inside:avoid}}
 </style></head><body>
-<div class="hero"><canvas id="space" style="position:absolute;inset:0;width:100%;height:100%;z-index:0"></canvas><div class="hero-inner">
-<svg class="plane" viewBox="0 0 100 60" fill="none"><path d="M5 35 L60 35 L95 10 L88 35 L95 38 L60 38 L55 55 L48 55 L50 38 L5 38 Z" fill="#7dd3fc"/><path d="M5 38 L50 38 L48 42 L5 42 Z" fill="#e0f2fe"/></svg>
-<div class="badge">✈ Telangana → Germany · No JEE needed · Updated Sep 2026</div>
-<h1>Study <span>Aerospace in Germany</span><br>after Inter — the visual guide</h1>
-<p class="sub">Every college, fee, tax, APS step, Kolleg exam, visa queue and job rule — verified from official sources, designed to read in 20 minutes.</p>
-<div class="stats">
-<div class="stat"><b>34</b><span>verified programs</span></div>
-<div class="stat"><b>€0</b><span>public tuition*</span></div>
-<div class="stat"><b>8</b><span>English-only options</span></div>
-<div class="stat"><b>2</b><span>no-JEE routes</span></div>
-<div class="stat"><b>70%</b><span>Inter floor</span></div>
-</div></div></div>
-<div class="shell">
+<div id="bar"></div>
 
-<div class="card" style="border-top:5px solid var(--sky)">
-<h2><span class="ico" style="background:#e0f2fe">🧭</span> Start here — your 60-second decision</h2>
-<p><b>No JEE? No problem.</b> EAMCET and JEE Mains alone mean nothing in Germany — only JEE <b>Advanced</b> gives direct entry. Without it you have two legal routes, both taking 4 years total:</p>
-<div class="grid2">
-<div class="tip"><b>A · Studienkolleg</b> — Inter → 1-year T-Kurs in Germany (free) → FSP exam → Bachelor. <i>Pick if you can hit German B1 within ~9 months.</i></div>
-<div class="tip"><b>B · 1-yr B.Tech bridge</b> — Inter → 1st-year Mech/Aero in India → direct Bachelor Year-1. <i>Pick if your German is zero now.</i></div>
+<!-- COVER -->
+<div class="cover"><div class="cover-inner">
+<div class="rule">★ &nbsp;The Complete Edition · September 2026&nbsp; ★</div>
+<h1>From Telangana Inter<br>to <em>Aerospace in Germany</em></h1>
+<div class="fig" style="background:transparent;border:0;margin:6px auto;max-width:420px">
+<svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="200" cy="165" rx="150" ry="12" fill="#ffffff18"/>
+<circle cx="70" cy="40" r="2" fill="#fff"/><circle cx="330" cy="30" r="2" fill="#fff"/><circle cx="290" cy="70" r="1.5" fill="#fff"/><circle cx="120" cy="60" r="1.5" fill="#fff"/><circle cx="200" cy="25" r="1.5" fill="#fff"/>
+<path d="M200 150 L200 110" stroke="#e8c15a" stroke-width="3" stroke-dasharray="6 5"/>
+<g><ellipse cx="200" cy="70" rx="16" ry="34" fill="#e8e4da"/><circle cx="200" cy="52" r="10" fill="#7dd3fc"/><rect x="184" y="88" width="32" height="10" fill="#9c2b2b"/><path d="M184 98 L172 122 L184 118 Z" fill="#9c2b2b"/><path d="M216 98 L228 122 L216 118 Z" fill="#9c2b2b"/><path d="M192 108 L188 140 L196 140 L197 110 Z" fill="#f59e0b"/><path d="M208 108 L212 140 L204 140 L203 110 Z" fill="#fbbf24"/></g>
+<text x="60" y="160" fill="#e8c15a" font-size="15" font-family="Georgia" font-style="italic">ohne JEE · auf Englisch erklärt</text>
+</svg>
+<figcaption style="color:#b7a37e">Every college · every fee · every form — verified, point by point.</figcaption>
 </div>
-<p style="margin-top:10px"><a class="btn" href="#routes">See both routes ↓</a><a class="btn ghost" href="#colleges">English colleges ↓</a></p>
-</div>
-
-<div class="card" id="colleges">
-<h2><span class="ico" style="background:#dcfce7">🎓</span> English-only programs <span class="tag free">no German needed</span></h2>
-<input id="filter" placeholder="🔍 Filter programs — try TUM, Bremen, free, Master…" oninput="f(this.value)">
-<div id="plist">
-<div class="prog" data-t="tum aerospace bsc bachelor english"><b>TUM Aerospace BSc</b> — <span class="tag info-t">only English Bachelor</span> · €3,000/sem · German A2 during studies + aptitude + 8-wk internship · WS only</div>
-<div class="prog" data-t="tum aerospace espace master english"><b>TUM Aerospace MSc / ESPACE</b> — €6,000/sem · IELTS 6.5 / TOEFL 88</div>
-<div class="prog" data-t="bremen space engineering master free"><b>Uni Bremen Space Engineering MSc ⭐ best free value</b> — <span class="tag free">€0</span> · C1 (waived if degree in English) · max 30 seats</div>
-<div class="prog" data-t="darmstadt aerospace master free"><b>TU Darmstadt Aerospace MSc</b> — <span class="tag free">€0</span> · English C1</div>
-<div class="prog" data-t="fh aachen aerospace master free"><b>FH Aachen Aerospace MSc</b> (3 sem) — <span class="tag free">€0</span> · IELTS 6.5 + GRE Quant</div>
-<div class="prog" data-t="wurzburg satellite master free"><b>JMU Würzburg Aerospace Info / SaTec</b> — <span class="tag free">€0</span> · IELTS 6.0</div>
-<div class="prog" data-t="btu cottbus master free"><b>BTU Cottbus Joint MSc</b> (Bordeaux/Louvain/Cottbus) — <span class="tag free">€0</span> · IELTS 6.0</div>
-<div class="prog" data-t="berlin mse master"><b>TU Berlin MSE</b> — <span class="tag paid">€24,900 + 1-yr exp</span> · backup only</div>
-</div>
-<p><b>German C1 required for everything else:</b> RWTH Aachen · Stuttgart (€1,500/sem) · TU Berlin · Braunschweig · Dresden · TUHH · HAW Hamburg (€397/sem → Airbus) · HSB Bremen · HM Munich · THI · Wildau · RheinMain · HKA · DHBW dual. <span class="tag warn-t">UniBw Munich: officers only — not for Indians</span> <span class="tag warn-t">Private unis: no pure aero degree</span></p>
-</div>
-
-<div class="card">
-<h2><span class="ico" style="background:#fef3c7">💶</span> Money at a glance (2026)</h2>
-<div class="grid2"><div>
-<table><tr><th>Item</th><th>Amount</th></tr>
-<tr><td>Public tuition</td><td><b>€0</b> + semester €97–440</td></tr>
-<tr><td>Exceptions</td><td>BW €1,500 · TUM €3k/€6k</td></tr>
-<tr><td>Blocked account</td><td><b>€11,904/yr (€992/mo)</b></td></tr>
-<tr><td>Health (TK)</td><td>€141 / €146 mo</td></tr>
-<tr><td>APS / IELTS / B1</td><td>₹18k / ₹17k / ~₹1.2L</td></tr></table>
-</div><div>
-<b>Living cost per month</b>
-<div class="bar-row"><span>Munich</span><div class="bar-bg"><div class="bar" style="width:100%"></div></div><b>€1,350</b></div>
-<div class="bar-row"><span>Stuttgart</span><div class="bar-bg"><div class="bar" style="width:78%"></div></div><b>€1,150</b></div>
-<div class="bar-row"><span>Berlin</span><div class="bar-bg"><div class="bar" style="width:78%"></div></div><b>€1,150</b></div>
-<div class="bar-row"><span>Hamburg</span><div class="bar-bg"><div class="bar" style="width:74%"></div></div><b>€1,100</b></div>
-<div class="bar-row"><span>Aachen</span><div class="bar-bg"><div class="bar" style="width:63%"></div></div><b>€925</b></div>
-<div class="bar-row"><span>Bremen</span><div class="bar-bg"><div class="bar" style="width:63%"></div></div><b>€925</b></div>
-<p style="font-size:13px;color:var(--mut)">Student jobs: minijob €603/mo · Werkstudent €15–22/h from sem 2 (covers 60–80% of costs). Coracle blocked accounts are dead — use Expatrio/Fintiba.</p>
+<p class="sub">A book for one student: Telangana Board, MPC, Class 12 — dreaming of Luft- und Raumfahrttechnik, without JEE.</p>
+<div class="btns"><a class="btn" href="#toc">Open the Book</a><a class="btn ghost" href="./">2000-page reference</a></div>
+<div class="meta">Compiled from ~550 verified searches + live official fetches · aps-india.de · daad.in · stk.kit.edu · india.diplo.de</div>
 </div></div>
-</div>
 
-<div class="card" id="routes">
-<h2><span class="ico" style="background:#ede9fe">🛤</span> Your route, month by month</h2>
-<div class="tl">
-<div><b>May–Jun 2026</b> — Inter result → confirm ≥700/1000 → start German A1 in Hyderabad → check passport = memo spelling</div>
-<div><b>Jul–Aug</b> — German intensive · prep APS file · alert college principal (APS verifies by official email)</div>
-<div><b>Sep–Nov</b> — Courier APS to Delhi (3–10 wks) · Goethe B1 in Dec · shortlist 4–6 Kollegs · TestAS 26 Nov</div>
-<div><b>Nov–Jan</b> — VPD via uni-assist (6–8 wks before deadline; WS27 by May–Jun is the main target)</div>
-<div><b>Apr–Jul 2027</b> — Blocked €11,904 → CSP portal → VFS Hyderabad → Aufnahme exam in Germany</div>
-<div><b>Aug–Oct 2027</b> — Fly → Anmeldung in 14 days → Kolleg starts mid-Sep 🚀</div>
-</div>
-<div class="warn"><b>Below 700/1000?</b> Both Bachelor routes are closed — finish a full B.Tech in India and come for a (mostly English) Master instead. <b>BiPC/MEC/CEC?</b> Not eligible for T-Kurs Aero — MPC only.</div>
-</div>
+<div class="book">
 
-<div class="grid2">
-<div class="card"><h2><span class="ico" style="background:#fee2e2">📄</span> APS checklist</h2>
-<p>aps-india.de → quiz → ₹18,000 via CCAvenue → courier to Delhi (DLTA Complex, R.K. Khanna Stadium, 1 Africa Ave, 110029): Y1+Y2 short memos + <b>long memo</b> + pass cert + TC + SSC + passport. Digital PDF — never rename it.</p></div>
-<div class="card"><h2><span class="ico" style="background:#e0f2fe">🗣</span> Language in Hyderabad</h2>
-<p>Goethe Banjara Hills Rs 27,730/level (A1→B1 ≈ ₹1.2L, 6–9 mo). IELTS IDP Begumpet ₹17k, <b>centre-based only</b>. Duolingo / PTE / Home / MOI letters = <b>visa rejection</b>.</p></div>
-</div>
+<!-- TOC -->
+<div class="chap" id="toc">
+<div class="chap-no">Contents</div><h2>What this book holds</h2>
+<div class="toc">
+<a href="#c0"><span>Preface — the 60-second decision</span><span>i</span></a>
+<a href="#c1"><span>I — All 34 aerospace colleges</span><span>1</span></a>
+<a href="#c2"><span>II — Money: fees, living, health, taxes</span><span>2</span></a>
+<a href="#c3"><span>III — Your Telangana board, decoded</span><span>3</span></a>
+<a href="#c4"><span>IV — The two roads without JEE</span><span>4</span></a>
+<a href="#c5"><span>V — German, TestAS &amp; IELTS in Hyderabad</span><span>5</span></a>
+<a href="#c6"><span>VI — Studienkolleg &amp; FSP, exam by exam</span><span>6</span></a>
+<a href="#c7"><span>VII — The 1-year B.Tech bridge</span><span>7</span></a>
+<a href="#c8"><span>VIII — APS → VPD → blocked → visa</span><span>8</span></a>
+<a href="#c9"><span>IX — SOP, CV, interview &amp; landing</span><span>9</span></a>
+<a href="#c10"><span>X — Scholarships, jobs, Blue Card, PR</span><span>10</span></a>
+<a href="#c11"><span>XI — Detailed plans: 12-month, 30-day, budgets</span><span>11</span></a>
+</div></div>
 
-<div class="card">
-<h2><span class="ico" style="background:#dcfce7">💼</span> After graduation</h2>
-<p>18-month job-seeker visa → <b>Blue Card 2026: €50,700</b> (MINT €45,934 — every aero offer €48–75k clears it) → PR in <b>21 months with B1</b> → citizenship in 5 yrs (note: India bans dual → OCI). Target <b>civil</b> programs first (A320, civil MRO, DLR/Isar) — military/secret projects need EU/NATO clearance.</p>
-<p style="margin-top:10px"><a class="btn" href="./">📖 Full 2000-page reference</a><button class="btn ghost noprint" onclick="window.print()">🖨 Print / PDF</button></p>
-</div>
+<!-- PREFACE -->
+<div class="chap" id="c0">
+<div class="chap-no">Preface</div><h2>The 60-second decision</h2>
+<p class="deck">Read only this page if you are in a hurry.</p>
+<ul class="points">
+<li><b>JEE is NOT compulsory.</b> 90% of Telangana students go without it. Only JEE <b>Advanced</b> counts in Germany; Mains alone and EAMCET count for nothing.</li>
+<li><b>Three gates, no exceptions:</b> ① Inter total ≥ <b>700/1000 (70%)</b> ② stream <b>MPC</b> ③ German <b>C1</b> for 95% of Bachelors (only TUM's BSc is fully English).</li>
+<li><b>Two roads, both 4 years:</b> <b>A — Studienkolleg:</b> Inter → free 1-year T-Kurs in Germany → FSP exam → Bachelor. <b>B — Bridge:</b> Inter → 1st-year Mech/Aero B.Tech in India → direct Bachelor Year-1.</li>
+<li><b>Money 2026:</b> blocked €11,904/yr (refundable monthly) + semester €97–440 + living €850–1,500/mo + APS ₹18k + IELTS ₹17k + German to B1 ≈ ₹1.2L. Tuition itself: <b>€0</b> except Stuttgart (€1,500/sem) and TUM (€3,000/sem BSc).</li>
+<li><b>Below 700/1000?</b> Both Bachelor roads close — finish a full B.Tech, come for a (mostly English) Master instead.</li>
+</ul></div>
+
+<!-- CH I -->
+<div class="chap" id="c1">
+<div class="chap-no">Chapter I</div><h2>All 34 aerospace colleges</h2>
+<p class="deck">Verified program by program. English first, then German.</p>
+<div class="fig"><svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="100" height="80" rx="6" fill="#e8f4e8" stroke="#166534"/><text x="70" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">ENGLISH</text><text x="70" y="70" text-anchor="middle" font-size="12" fill="#166534">8 options</text><text x="70" y="86" text-anchor="middle" font-size="11" fill="#166534">TUM·Bremen·DA</text>
+<rect x="150" y="20" width="100" height="80" rx="6" fill="#e0f2fe" stroke="#075985"/><text x="200" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#075985">GERMAN</text><text x="200" y="70" text-anchor="middle" font-size="12" fill="#075985">26 options</text><text x="200" y="86" text-anchor="middle" font-size="11" fill="#075985">C1 needed</text>
+<rect x="280" y="20" width="100" height="80" rx="6" fill="#fee2e2" stroke="#991b1b"/><text x="330" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">AVOID</text><text x="330" y="70" text-anchor="middle" font-size="12" fill="#991b1b">UniBw·private</text><text x="330" y="86" text-anchor="middle" font-size="11" fill="#991b1b">Lilium·ESA-staff</text>
+</svg><figcaption>The whole landscape in one picture.</figcaption></div>
+<p><b>English-taught (zero German at admission):</b></p>
+<ul class="points">
+<li><b>TUM Aerospace BSc</b> — the <i>only</i> English Bachelor · €3,000/sem · German A2 during studies + aptitude test + 8-week internship · winter intake only.</li>
+<li><b>Uni Bremen Space Engineering MSc</b> — ⭐ best free value · €0 · C1 waived if your degree was in English · only 30 seats/semester.</li>
+<li><b>TU Darmstadt Aerospace MSc</b> — €0 · English C1.</li>
+<li><b>FH Aachen Aerospace MSc</b> (3 sem) — €0 · IELTS 6.5 + GRE Quant.</li>
+<li><b>JMU Würzburg / BTU Cottbus Masters</b> — €0 · IELTS 6.0.</li>
+<li><b>TUM MSc / ESPACE</b> — €6,000/sem · IELTS 6.5.</li>
+<li><b>TU Berlin MSE</b> — €24,900 + 1-year experience · backup only.</li>
+</ul>
+<p><b>German C1 (free except noted):</b></p>
+<ul class="points">
+<li><b>Technical universities</b> — RWTH Aachen · Stuttgart (€1,500/sem) · TU Berlin · Braunschweig · Dresden (Diplom) · TU Hamburg · HAW Hamburg (€397/sem, direct Airbus pipeline).</li>
+<li><b>Applied sciences (FH)</b> — small classes (~40:1), 20–22-week built-in internship, fastest industry entry: FH Aachen BEng · HSB Bremen · HM Munich · THI Ingolstadt · Wildau · RheinMain · HKA Karlsruhe · DHBW dual (needs a company contract 12–18 months early).</li>
+<li><b>Not for you</b> — UniBw Munich (officers only) · private universities (no pure aero degree, €10–27k/yr) · Lilium (insolvent since Oct 2024) · ESA staff posts (need ESA-member citizenship; enter via contractors or DLR).</li>
+</ul></div>
+
+<!-- CH II -->
+<div class="chap" id="c2">
+<div class="chap-no">Chapter II</div><h2>Money: fees, living, health, taxes</h2>
+<p class="deck">Every euro, point by point.</p>
+<ul class="points">
+<li><b>Tuition:</b> public = <b>€0</b> + semester contribution €97–440 (TUM €97 · Stuttgart €184 · Berlin €379 · Braunschweig €440 · HAW €397).</li>
+<li><b>Exceptions:</b> Baden-Württemberg €1,500/sem (Stuttgart/KIT/HKA) · TUM BSc €3,000 / MSc €6,000 · second degree €650.</li>
+<li><b>Blocked account (visa proof, paid back monthly):</b> <b>€11,904/yr = €992/mo</b> + €100–150 buffer. Expatrio (€119+€9/mo) or Fintiba (€159+€9.90/mo). <b>Coracle is dead since 2025 — never use it.</b></li>
+<li><b>Living/month:</b> Munich €1,200–1,500 · Stuttgart/Berlin €1,000–1,300 · Hamburg €950–1,250 · Aachen/Bremen/Braunschweig €850–1,050.</li>
+<li><b>Health (TK 2026):</b> €141.16/mo (under 23) · €146.29/mo (23+, childless). Transport: Deutschland ticket €63/mo · semester ticket €208–227 · Rundfunk €18.36/mo per flat.</li>
+<li><b>Student jobs:</b> minijob €603/mo · Werkstudent max 20h/week in lectures (unlimited in holidays within 140 full / 280 half days a year) at €15–22/h from semester 2 — covers 60–80% of living costs. Income tax starts above €12,348/yr; as a student you effectively pay ~€0.</li>
+</ul></div>
+
+<!-- CH III -->
+<div class="chap" id="c3">
+<div class="chap-no">Chapter III</div><h2>Your Telangana board, decoded</h2>
+<p class="deck">TSBIE, Nampally Hyderabad — the exact math that decides everything.</p>
+<ul class="points">
+<li><b>Total = 1000:</b> Inter 1st year (500) + 2nd year (500). Percentage = (Y1+Y2)/1000 — overall, never best-of-5.</li>
+<li><b>850 / 750</b> → eligible for both roads. <b>700</b> → borderline eligible. <b>680 or less</b> → both Bachelor roads closed.</li>
+<li><b>MPC only.</b> BiPC/MEC/CEC cannot enter T-Kurs Aerospace.</li>
+<li><b>Collect now:</b> Y1 short memo + Y2 short memo + <b>long consolidated memo</b> (comes via college months later — APS needs this; the internet printout alone fails) + pass certificate + TC from principal + study certificate + SSC memo.</li>
+<li><b>Name = passport, letter for letter.</b> Fix initials ("K. Sai Teja") by affidavit <i>before</i> APS. English-medium memos need no translation.</li>
+</ul></div>
+
+<!-- CH IV -->
+<div class="chap" id="c4">
+<div class="chap-no">Chapter IV</div><h2>The two roads without JEE</h2>
+<p class="deck">Pick one. Both take four years.</p>
+<p><b>Road A — Studienkolleg (leave after Inter):</b></p>
+<ul class="points">
+<li>Confirm ≥70% → chase long memo + pass certificate (TS colleges delay till Aug–Sep).</li>
+<li>German A1→B1 intensive in Hyderabad (6–9 months) + IELTS 6.5 alongside.</li>
+<li>APS <b>XII procedure</b> (₹18,000, Delhi, 3–10 weeks) — leave JEE fields blank; warn your principal + TSBIE or verification stalls.</li>
+<li>TestAS Core+Engineering (target 110+, 115+ for TUM/RWTH) + VPD via uni-assist (4–6 weeks, valid 1 year).</li>
+<li>Apply to 3–5 public Kollegs (deadlines 15.07 / 15.01) → Aufnahmeprüfung in Germany → free T-Kurs, 2 semesters → FSP (June/July) → Bachelor from October.</li>
+</ul>
+<p><b>Road B — 1-year B.Tech bridge (stay one year):</b></p>
+<ul class="points">
+<li>Join 1st-year <b>Mechanical / Aerospace / Mechatronics — never CSE</b> — at an H+ university. Priority: NIT-W › JNTUH-CEH › OUCE › CBIT/Vasavi/MGIT (if JNTUH/OU-awarded). Verify the <i>degree-awarding</i> university at anabin.kmk.org.</li>
+<li>Finish both semesters, zero backlogs, aim 8.0+ CGPA; learn German to B2 + IELTS; keep stamped syllabus copies.</li>
+<li>One single APS <b>undergrad-2-semesters</b> application <i>after</i> year 1 (applying after sem 1 means paying twice) → VPD → direct Bachelor Year-1. No Kolleg.</li>
+<li>Rule: pick A if B1 by December is realistic; pick B if German is zero now — it doubles as an Indian backup if the visa fails.</li>
+</ul></div>
+
+<!-- CH V -->
+<div class="chap" id="c5">
+<div class="chap-no">Chapter V</div><h2>German, TestAS &amp; IELTS in Hyderabad</h2>
+<ul class="points">
+<li><b>Goethe-Zentrum, Banjara Hills</b> (20 Journalists Colony Rd 3): Rs 27,730 per level. Exams — A1 ₹9,400 · A2 ₹10,600 · B1 ₹18,800 · B2 ₹21,200 · C1 ₹24,000. Zero→B1 ≈ ₹1.2L and 6–9 months intensive; →C1 12–18 months.</li>
+<li><b>TestDaF €195</b> — no fixed Hyderabad slot; travel to Chennai/Bengaluru/Delhi/Pune. telc via German Drishty Hyderabad. Degree needs C1 (TestDaF 4×4 / DSH-2 / Goethe C1 / telc C1 Hochschule); Kolleg application B1 on paper, B2 in reality.</li>
+<li><b>TestAS:</b> 24 Oct / 26 Nov 2026 / 25 Feb 2027 — Core + Engineering, in English or German.</li>
+<li><b>IELTS:</b> IDP Begumpet/Kukatpally, Academic ₹17,000 (paper) / ₹19,000 (computer) — <b>centre-based only</b>.</li>
+<li><b>Visa rejects:</b> Duolingo, PTE, TOEFL Home Edition and MOI letters — confirmed by the German missions in India. Always book a centre test.</li>
+</ul></div>
+
+<!-- CH VI -->
+<div class="chap" id="c6">
+<div class="chap-no">Chapter VI</div><h2>Studienkolleg &amp; FSP, exam by exam</h2>
+<ul class="points">
+<li><b>T-Kurs</b> = university engineering (German, Maths, Physics, Chemistry, ~32 hrs/week, ~25 students, attendance compulsory). <b>TI-Kurs</b> = FH/informatics track. Public Kollegs (Berlin, KIT Karlsruhe, Frankfurt, Hannover, Hamburg, Munich, Nordhausen…) are tuition-free.</li>
+<li><b>Aufnahmeprüfung:</b> onSET German (8 gap-texts × 20 blanks, 40 min) + digital Maths (German class-11 level, no integrals).</li>
+<li><b>FSP:</b> German 4.5h (250-word graph essay + listening + reading + grammar) · Maths 180 min (non-programmable calculator + formula sheet) · Physics/Chemistry 180 min · oral 15–20 min. An internal FSP is recognised nationwide.</li>
+<li>Private Kollegs (€5.5–8k) only as backup if you fail twice or miss the deadline.</li>
+</ul></div>
+
+<!-- CH VII -->
+<div class="chap" id="c7">
+<div class="chap-no">Chapter VII</div><h2>The 1-year bridge, in one page</h2>
+<ul class="points">
+<li><b>Mech → Aero is accepted</b> as "subject-related". <b>CSE → Aero is not</b> — you would be rejected or sent back to Kolleg. Never take CSE as an "easy CGPA" shortcut.</li>
+<li>Government colleges (JNTUH/OUCE ≈ ₹1–1.5L/yr) make the bridge a net saver against a Kolleg living year in Germany (~€11–12k); expensive private bridges erase the saving.</li>
+<li>Collect: both sem memos + promotion proof + stamped syllabus (for the German ECTS audit) + English-medium letter.</li>
+</ul></div>
+
+<!-- CH VIII -->
+<div class="chap" id="c8">
+<div class="chap-no">Chapter VIII</div><h2>APS → VPD → blocked → visa</h2>
+<ul class="points">
+<li><b>APS</b> (aps-india.de): quiz → register → pay ₹18,000 via CCAvenue → courier colour A4 copies (both sides) + signed authorisation letter to Delhi (Gate 3, DLTA Complex, R.K. Khanna Stadium, 1 Africa Avenue, 110029 — no drop-offs). Track online; the digital PDF certificate must never be renamed or merged.</li>
+<li><b>VPD</b> (my.uni-assist.de): upload the untouched APS PDF + memos + language cert + passport (~€75 + €30/extra uni, 4–6 weeks). Then apply <i>directly</i> on each university portal with the VPD.</li>
+<li><b>Blocked + insurance</b> only <i>after</i> admission (€11,904 + buffer via Expatrio/Fintiba) + €30k travel insurance + public insurer (TK/AOK) confirmation.</li>
+<li><b>CSP + VFS:</b> apply on digital.diplo.de first (pre-check), then biometrics at the assigned VFS — Telangana belongs to the <b>Chennai mission</b> (VFS Hyderabad, Punjagutta Metro). Fee €75 + ~₹3,259. Processing 8–12 weeks at peak — <b>start 6–8 months before flying</b>. Rejections can no longer be appealed (since July 2025): you reapply.</li>
+</ul></div>
+
+<!-- CH IX -->
+<div class="chap" id="c9">
+<div class="chap-no">Chapter IX</div><h2>SOP, CV, interview &amp; landing</h2>
+<ul class="points">
+<li><b>SOP (500–800 words):</b> who you are + which Kolleg/program → fit (MPC marks, drone/rocket project, Python/MATLAB/CAD, TestAS) → why <i>this</i> place (name 2–3 modules + a lab — prove you read the handbook) → honest no-JEE line (no Advanced rank, so T-Kurs+FSP is the recognised path; never criticise India; don't lead with "free tuition") → future (FSP → named Bachelor → labs/internship).</li>
+<li><b>CV:</b> tabular, 1–2 pages, reverse-chronological, no gaps since Inter, identical spellings everywhere. <b>LORs ×2:</b> Inter Maths + Physics lecturers, letterhead, your rank + two specific examples.</li>
+<li><b>Interview (5–15 min):</b> know your city, semester fee, housing plan and course length (Kolleg 2 sem + Bachelor 6 sem); explain the gap year with certificates; know your sponsor and the €992/mo payout.</li>
+<li><b>Landing:</b> housing confirmation → <b>Anmeldung within 14 days</b> → bank activation → enrolment → residence permit (~€100, eAT card).</li>
+</ul></div>
+
+<!-- CH X -->
+<div class="chap" id="c10">
+<div class="chap-no">Chapter X</div><h2>Scholarships, jobs, Blue Card, PR</h2>
+<ul class="points">
+<li><b>Scholarships:</b> Deutschlandstipendium €300/mo (all nationalities) · DAAD EPOS €992/mo (needs 2 yrs experience) · WISE research internships (IIT/NIT) · Erasmus Mundus €1,400/mo.</li>
+<li><b>After graduation:</b> 18-month job-seeker visa → <b>EU Blue Card 2026: €50,700</b> (MINT €45,934 — every aero starting salary of €48–75k clears it: Airbus €58–68k · MTU €60–72k · DLR ~€52–60k).</li>
+<li><b>PR in 21 months</b> with B1 German (27 with A1); citizenship in 5 years — note India bans dual citizenship (you would take OCI).</li>
+<li><b>Clearance:</b> military/secret projects (Eurofighter, A400M-military, FCAS) routinely need EU/NATO citizenship — target <b>civil</b> programs first, disclose nationality early.</li>
+</ul></div>
+
+<!-- CH XI -->
+<div class="chap" id="c11">
+<div class="chap-no">Chapter XI</div><h2>Detailed plans</h2>
+<p class="deck">Pin this chapter on your wall.</p>
+<p><b>Plan 1 — 12-month master plan (Inter 2026 → fly 2027):</b></p>
+<table class="plan">
+<tr><th>When</th><th>Do exactly this</th></tr>
+<tr><td>May–Jun 26</td><td>Result (12 Apr 2026) → compute % → start German A1 → verify passport = memo spelling</td></tr>
+<tr><td>Jul–Aug 26</td><td>German intensive · build APS file · warn college principal (APS verifies by official email)</td></tr>
+<tr><td>Sep–Nov 26</td><td>Courier APS · book Goethe B1 (Dec) · shortlist 4–6 Kollegs · TestAS 26 Nov</td></tr>
+<tr><td>Nov–Jan 27</td><td>VPD via uni-assist (SS27 needs it by ~15 Jan — tight; WS27 by May–Jun is the real target)</td></tr>
+<tr><td>Apr–Jul 27</td><td>Blocked €11,904 → CSP portal → VFS Hyderabad → Aufnahme exam in Germany</td></tr>
+<tr><td>Aug–Oct 27</td><td>Fly (arrive 1 week early) → Anmeldung → Kolleg starts mid-September</td></tr>
+</table>
+<p><b>Plan 2 — first 30 days (start tomorrow):</b></p>
+<ul class="points">
+<li><b>Days 1–3:</b> compute % · list documents · photograph every memo · open passport check.</li>
+<li><b>Days 4–7:</b> visit Goethe-Zentrum, book A1 · book IELTS date 3 months out · create myguide.de shortlist of 8 programs.</li>
+<li><b>Days 8–14:</b> APS quiz + start file · meet principal about verification email · start 2 hrs/day German.</li>
+<li><b>Days 15–30:</b> A1 in full swing · TestAS sample papers (Engineering) · draft SOP v1 · finalise Kolleg vs bridge decision.</li>
+</ul>
+<p><b>Plan 3 — family budget (one-time unless noted):</b></p>
+<ul class="points">
+<li>APS ~₹20k incl courier · German to B1 ~₹1.2L · IELTS ~₹17k · TestAS/TestDaF ~₹14–17k · visa ~₹15k · flight ₹50–70k.</li>
+<li>Blocked ₹10.5–12.8L <b>(refundable monthly — not a cost)</b> · semester €144–395 (+TUM/Stuttgart extra) · initial deposit for housing.</li>
+<li>From semester 2, Werkstudent pay (€15–22/h) covers 60–80% of monthly costs.</li>
+</ul>
+<p><b>Plan B — if things break:</b></p>
+<ul class="points">
+<li><b>Below 70%?</b> Full B.Tech in India → English Master in Germany (Bremen/Darmstadt/FH Aachen, all free).</li>
+<li><b>Kolleg Aufnahme failed?</b> One retry next intake + private Kolleg as paid backup; keep learning to B2.</li>
+<li><b>Visa rejected?</b> No appeal exists — fix the stated reason (usually funds/language proof), reapply with a fresh file.</li>
+</ul></div>
 
 </div>
-<footer>Visual overall report · verified Sep 2026 · re-check fees & deadlines on official pages each intake · <a href="./">2000-page reference book</a></footer>
+<footer>The Telangana → Germany Aerospace Book · overall readable edition · verified Sep 2026 · re-check fees &amp; deadlines each intake · <a href="./" style="color:var(--gold2)">2000-page reference</a></footer>
 <button id="toTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
 <script>
-function f(v){v=v.toLowerCase();document.querySelectorAll('.prog').forEach(e=>{e.style.display=e.dataset.t.includes(v)||!v?'':'none'})}
-addEventListener('scroll',()=>{toTop.style.display=scrollY>500?'block':'none'});
-/* 3D tilt cards */
-document.querySelectorAll('.card').forEach(c=>{c.style.transition='transform .15s';c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*7}deg) rotateX(${-y*7}deg)`});c.addEventListener('mouseleave',()=>c.style.transform='')});
-/* 3D orbital hero: wireframe earth + 2 orbit rings + satellite + stars */
-try{
-if(window.THREE){
-const cv=document.getElementById('space'),R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
-const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,2,0.1,100);C.position.set(0,0.6,7);
-const earth=new THREE.Mesh(new THREE.SphereGeometry(1.5,24,24),new THREE.MeshBasicMaterial({color:0x38bdf8,wireframe:true,transparent:true,opacity:0.55}));S.add(earth);
-const ring1=new THREE.Mesh(new THREE.TorusGeometry(2.4,0.015,8,80),new THREE.MeshBasicMaterial({color:0x22d3ee,transparent:true,opacity:0.7}));ring1.rotation.x=1.2;S.add(ring1);
-const ring2=new THREE.Mesh(new THREE.TorusGeometry(3.1,0.012,8,80),new THREE.MeshBasicMaterial({color:0xf59e0b,transparent:true,opacity:0.55}));ring2.rotation.x=1.35;ring2.rotation.y=0.4;S.add(ring2);
-const sat=new THREE.Mesh(new THREE.BoxGeometry(0.16,0.1,0.22),new THREE.MeshBasicMaterial({color:0xffffff}));S.add(sat);
-const sg=new THREE.BufferGeometry(),sp=[];for(let i=0;i<350;i++)sp.push((Math.random()-0.5)*22,(Math.random()-0.5)*12,(Math.random()-0.5)*10-2);
-sg.setAttribute('position',new THREE.Float32BufferAttribute(sp,3));S.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0xffffff,size:0.035,transparent:true,opacity:0.8})));
-function size(){const h=cv.parentElement;R.setSize(h.clientWidth,h.clientHeight,false);C.aspect=h.clientWidth/h.clientHeight;C.updateProjectionMatrix()}
-size();addEventListener('resize',size);
-let t=0;(function anim(){requestAnimationFrame(anim);if(document.hidden)return;t+=0.008;earth.rotation.y+=0.0025;
-sat.position.set(Math.cos(t)*2.4,Math.sin(t)*2.4*Math.sin(1.2),Math.sin(t)*2.4*Math.cos(1.2));sat.rotation.y=t*2;R.render(S,C)})();
-}}catch(e){/* 2D fallback: hero gradient stays */}
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';toTop.style.display=h.scrollTop>500?'block':'none'});
 </script>
 </body></html>
